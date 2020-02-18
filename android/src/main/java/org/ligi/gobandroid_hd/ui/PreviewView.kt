@@ -24,14 +24,14 @@ class PreviewView : View {
         set(game) {
             field = game
             span = TsumegoHelper.calcSpanAsPoint(game!!)
-            white_stone_bitmap = null
+//            white_stone_bitmap = null
             requestLayout()
         }
-    private var white_stone_bitmap: Bitmap? = null
-    private var black_stone_bitmap: Bitmap? = null
+    private lateinit var white_stone_bitmap: Bitmap
+    private lateinit var black_stone_bitmap: Bitmap
     private var span: CellImpl? = null
     private var stone_size: Float = 0F
-    private var black_line_paint: Paint? = null
+    private lateinit  var black_line_paint: Paint
 
     constructor(context: Context) : super(context) {
         init()
@@ -54,7 +54,7 @@ class PreviewView : View {
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         super.onSizeChanged(w, h, oldw, oldh)
 
-        white_stone_bitmap = null
+        //white_stone_bitmap = null
     }
 
 

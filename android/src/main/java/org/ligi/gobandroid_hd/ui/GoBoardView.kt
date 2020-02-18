@@ -86,10 +86,10 @@ open class GoBoardView : View {
 
     private var stone_size: Float = 0.toFloat()
 
-    private var white_stone_bitmap: Bitmap? = null
-    private var black_stone_bitmap: Bitmap? = null
-    private var white_stone_bitmap_small: Bitmap? = null
-    private var black_stone_bitmap_small: Bitmap? = null
+    private lateinit var white_stone_bitmap: Bitmap
+    private lateinit var black_stone_bitmap: Bitmap
+    private lateinit var white_stone_bitmap_small: Bitmap
+    private lateinit var black_stone_bitmap_small: Bitmap
 
     var move_stone_mode = false
 
@@ -342,7 +342,7 @@ open class GoBoardView : View {
     /**
      * resize the images regarding to stone_size
      */
-    fun regenerate_images() {
+    private fun regenerate_images() {
 
         white_stone_bitmap = getScaledRes(stone_size, R.drawable.stone_white)
         black_stone_bitmap = getScaledRes(stone_size, R.drawable.stone_black)
