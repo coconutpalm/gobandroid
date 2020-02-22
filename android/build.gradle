@@ -16,7 +16,7 @@ repositories {
 android {
     signingConfigs {
         config {
-            storeFile file('D:\\icehong\\gobandroid.jks')
+            storeFile file('file:///D:/icehong/gobandroid.jks')
             storePassword 'gobandroid'
             keyAlias = 'gobandroid'
             keyPassword 'gobandroid'
