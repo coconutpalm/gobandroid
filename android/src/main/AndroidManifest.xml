@@ -50,6 +50,7 @@
             android:launchMode="singleTask"
             android:label="Gobandroid TV">
             <intent-filter>
+                <!-- Delete temporarily for huawei AppGallery allow one icon for each app.
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -57,6 +58,7 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+                -->
                 <category android:name="tv.ouya.intent.category.GAME" />
             </intent-filter>
         </activity>
