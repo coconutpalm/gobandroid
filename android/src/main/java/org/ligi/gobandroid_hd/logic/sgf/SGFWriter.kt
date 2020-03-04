@@ -6,6 +6,7 @@ import org.ligi.gobandroid_hd.logic.GoGame
 import org.ligi.gobandroid_hd.logic.GoMove
 import org.ligi.gobandroid_hd.logic.markers.TextMarker
 import org.ligi.tracedroid.logging.Log
+import permissions.dispatcher.NeedsPermission
 import java.io.BufferedWriter
 import java.io.File
 import java.io.FileWriter

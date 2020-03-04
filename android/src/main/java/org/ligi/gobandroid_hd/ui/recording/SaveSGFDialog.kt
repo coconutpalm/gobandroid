@@ -32,13 +32,14 @@ class SaveSGFDialog(private val context: GobandroidFragmentActivity) : Gobandroi
 
         intro_txt.text = String.format(context.resources.getString(R.string.save_sgf_question), settings.SGFSavePath)
 
-        setPositiveButton(android.R.string.ok, { _ ->
+        setPositiveButton(android.R.string.ok) {
             val file = completeFileName()
             val res = SGFWriter.saveSGF(gameProvider.get(), file!!)
 
             val toastText = if (res) R.string.file_saved else R.string.file_not_saved
             Toast.makeText(context, String.format(context.getString(toastText), file.absolutePath), Toast.LENGTH_SHORT).show()
-        })
+            if (res) (dismiss())
+        }
 
         sgf_name_edittext.doAfterEdit {
             setPositiveButtonAndOverrideCheckboxEnabledByExistenceOfFile()
