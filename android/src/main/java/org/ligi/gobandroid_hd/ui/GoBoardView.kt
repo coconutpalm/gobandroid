@@ -86,10 +86,10 @@ open class GoBoardView : View {
 
     private var stone_size: Float = 0.toFloat()
 
-    private lateinit var white_stone_bitmap: Bitmap
-    private lateinit var black_stone_bitmap: Bitmap
-    private lateinit var white_stone_bitmap_small: Bitmap
-    private lateinit var black_stone_bitmap_small: Bitmap
+    private var white_stone_bitmap: Bitmap? = null
+    private var black_stone_bitmap: Bitmap? = null
+    private var white_stone_bitmap_small: Bitmap? = null
+    private var black_stone_bitmap_small: Bitmap? = null
 
     var move_stone_mode = false
 
