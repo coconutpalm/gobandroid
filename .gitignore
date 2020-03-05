@@ -19,4 +19,6 @@ module_gobandroid.xml
 monkey_scripts/
 proguard/
 proguard_logs/
+android/noAnalyticsNoCloudNoAutostart/
+
 
